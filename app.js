@@ -3,7 +3,7 @@ const listWrapper = document.querySelector(".list-wrapper");
 const searchInput = document.querySelector("#search-input");
 const numberFilter = document.querySelector("#number");
 const nameFilter = document.querySelector("#name");
-const notFoundMessage = document.querySelector(".not-found-message");
+const notFoundMessage = document.querySelector("#not-found-message");
 
 let allPokemons = [];
 
@@ -45,7 +45,7 @@ function renderContent(pokemon) {
       <div class="img-wrap">
         <img 
           src="https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg" 
-          alt="${p.name}
+          alt="${p.name}" 
         />
       </div>
       <div class="name-wrap">
@@ -57,7 +57,7 @@ function renderContent(pokemon) {
       const success = await fetchDataBeforeRedirect(pokemonId);
 
       if (success) {
-        window.location.href = `./detail.html?id=${pokemonId}`;
+        window.location.href = `./pages/detail.html?id=${pokemonId}`;
       }
     });
 
